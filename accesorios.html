@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body style="text-align: center;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- BOTONES -->
+
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="margin: 20px;">
+    Panel de Control
+</a>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="text-align: left;">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Panel de Control</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a class="dropdown-item" href="indexdb.html" style="font-weight: bolder; text-decoration: underline;">Volver al inicio</a>
+        <div>
+            Aquí se mostrarán los parámetros para tomar las estadísiticas.
+        </div>
+        <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Desplegar.
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="usuarios.html">Usuarios</a></li>
+                <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- Usuarios -->
+
+    <div class="alert alert-light" role="alert" style=" font-weight: bold; margin-bottom: 40px;">
+      ACCESORIOS
+    </div>
+    
+    <div class="accordion" id="accordionAccesorios" style="text-align: left;">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccesorios" aria-expanded="true" aria-controls="collapseAccesorios">
+            Lista de Accesorios para Equipos de Audio
+          </button>
+        </h2>
+        <div id="collapseAccesorios" class="accordion-collapse collapse show" data-bs-parent="#accordionAccesorios">
+          <div class="accordion-body">
+            <table class="table" style="text-align: center;">
+              <thead>
+                <tr>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Precio Promedio ($)</th>
+                  <th>Ventas</th>
+                  <th>Ingresos ($)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>On-Stage</td>
+                  <td>MS7701B</td>
+                  <td>49</td>
+                  <td>800</td>
+                  <td>39,200</td>
+                </tr>
+                <tr>
+                  <td>Gator</td>
+                  <td>G-CLUB-12</td>
+                  <td>99</td>
+                  <td>400</td>
+                  <td>39,600</td>
+                </tr>
+                <tr>
+                  <td>Shure</td>
+                  <td>SM58</td>
+                  <td>99</td>
+                  <td>600</td>
+                  <td>59,400</td>
+                </tr>
+                <tr>
+                  <td>Hosa</td>
+                  <td>CSS-110</td>
+                  <td>29</td>
+                  <td>1000</td>
+                  <td>29,000</td>
+                </tr>
+                <tr>
+                  <td>IK Multimedia</td>
+                  <td>iRig HD 2</td>
+                  <td>99</td>
+                  <td>500</td>
+                  <td>49,500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionPaneles" style="text-align: left;">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaneles" aria-expanded="true" aria-controls="collapsePaneles">
+            Lista de Paneles Acústicos
+          </button>
+        </h2>
+        <div id="collapsePaneles" class="accordion-collapse collapse show" data-bs-parent="#accordionPaneles">
+          <div class="accordion-body">
+            <table class="table" style="text-align: center;">
+              <thead>
+                <tr>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Precio Promedio ($)</th>
+                  <th>Ventas</th>
+                  <th>Ingresos ($)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Auralex</td>
+                  <td>Studiofoam Panels</td>
+                  <td>50</td>
+                  <td>300</td>
+                  <td>15,000</td>
+                </tr>
+                <tr>
+                  <td>Primacoustic</td>
+                  <td>Broadway Panels</td>
+                  <td>75</td>
+                  <td>200</td>
+                  <td>15,000</td>
+                </tr>
+                <tr>
+                  <td>Soundproof Cow</td>
+                  <td>Acoustic Panels</td>
+                  <td>60</td>
+                  <td>250</td>
+                  <td>15,000</td>
+                </tr>
+                <tr>
+                  <td>Foam Factory</td>
+                  <td>Acoustic Foam Panels</td>
+                  <td>40</td>
+                  <td>400</td>
+                  <td>16,000</td>
+                </tr>
+                <tr>
+                  <td>Vicoustic</td>
+                  <td>Super Acoustic Panels</td>
+                  <td>80</td>
+                  <td>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body style="text-align: center;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- BOTONES -->
+
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="margin: 20px;">
+    Panel de Control
+</a>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="text-align: left;">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Panel de Control</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a class="dropdown-item" href="indexdb.html" style="font-weight: bolder; text-decoration: underline;">Volver al inicio</a>
+        <div>
+            Aquí se mostrarán los parámetros para tomar las estadísiticas.
+        </div>
+        <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Desplegar.
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="usuarios.html">Usuarios</a></li>
+                <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- Usuarios -->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <div class="alert alert-light" role="alert" style=" font-weight: bold; margin-bottom: 40px;">
+      USUARIOS REGISTRADOS TOTALES
+    </div>
+    
+    <div class="card" style="width: 60%; margin: auto; margin-bottom: 20px;">
+      <div class="card-body">
+        <h5 class="card-title">Usuarios Registrados TOTALES</h5>
+        <p class="card-text">32489</p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F550%2F731%2Foriginal%2Fuser-icon-vector.jpg&f=1&nofb=1&ipt=572acae7c8bfe66178611faeb29478cc48efe4d330fbb090394aed964853605f&ipo=images" style="width: 120px;">
+      </div>
+    </div>
+
+    <div class="accordion" id="accordionExample" style="text-align: left;">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="true" aria-controls="collapseUsers">
+            Lista de Usuarios
+          </button>
+        </h2>
+        <div id="collapseUsers" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <table class="table">
+              <thead>
+                <tr style="text-align: center;">
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Correo Electrónico</th>
+                  <th>Usuario Activado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Juan Pérez</td>
+                  <td>juan.perez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                      <div class="btn-group" role="group"                   aria-label="Ejemplo de estilos mixtos básicos">
+                          <button type="button" class="btn btn-danger"                  data-bs-toggle="modal"                  data-bs-target="#modalEliminar">
+                              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images"             style="width: 15px; object-fit: cover;">
+                          </button>
+                          <button type="button" class="btn                  btn-warning" data-bs-toggle="modal"                 data-bs-target="#modalEditar">
+                              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images"             style="width: 23px; object-fit: cover;">
+                          </button>
+                          <button type="button" class="btn btn-info"                  data-bs-toggle="modal"                  data-bs-target="#modalVer">
+                              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images"               style="width: 20px; height: 20px;">
+                          </button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>María López</td>
+                  <td>maria.lopez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Carlos García</td>
+                  <td>carlos.garcia@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Ana Martínez</td>
+                  <td>ana.martinez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Pedro Sánchez</td>
+                  <td>pedro.sanchez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Lucía Fernández</td>
+                  <td>lucia.fernandez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Javier Ruiz</td>
+                  <td>javier.ruiz@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Elena Torres</td>
+                  <td>elena.torres@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Diego Jiménez</td>
+                  <td>diego.jimenez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Clara Gómez</td>
+                  <td>clara.gomez@example.com</td>
+                  <td><div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked style="width: 50px; height: 30px; margin: auto;">
+                  </div>
+                  </td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Ejemplo de estilos mixtos básicos">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F353%2F264%2Foriginal%2Ftrash-icon-recycle-and-trash-sign-symbol-icon-free-png.png&f=1&nofb=1&ipt=10908213038cfcd4100872aa6a72de6aa8412a8182abe9e9778731309d3bb505&ipo=images" style="width: 15px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Fpen-icon-png%2Fpen-icon-png-7.jpg&f=1&nofb=1&ipt=273ac69e023c40b4bf7b0772bcdfcf64c47e00fc42fc75b84e619330618d43df&ipo=images" style="width: 23px; object-fit: cover;">
+                        </button>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalVer">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F009%2F356%2F887%2Fnon_2x%2Feye-icon-sign-symbol-design-free-png.png&f=1&nofb=1&ipt=1b684847593163b2748bfc82a61b373e12caf24534433ade9aac0cd616d366b9&ipo=images" style="width: 20px; height: 20px;">
+                        </button>
+                    </div>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
