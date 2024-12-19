@@ -1,141 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <title>COV-FI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <title>COV-FI</title>
 </head>
+
 <body style="max-width: 800px; margin: auto; background-color: rgb(20, 20, 20); border: 5px;">
-    <nav class="navbar navbar-expand-lg bg-danger" style="position: fixed; z-index: 15; max-width: 800px; width: 100%;margin-top: -20px;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="font-weight: bolder;">COV-FI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="formdb.html">Iniciar Sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Página Principal</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                        <ul class="dropdown-menu bg-dark">
-                            <li><a class="dropdown-item text-light" href="#">Altavoces</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Amplificadores</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Interfaces de Audio</a></li>
-                            <li><a class="dropdown-item text-light" href="#">DACs</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Micrófonos</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Accesorios</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-3 bg-dark text-light" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </form>
+  <nav class="navbar navbar-expand-lg bg-danger"
+    style="position: fixed; z-index: 15; max-width: 800px; width: 100%;margin-top: -20px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-weight: bolder;">COV-FI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            
+            <div class="dropdown">
+              <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: -12px;">
+                Iniciar Sesión
+              </button>
+              <ul class="dropdown-menu text-bg-dark" style="width: 300px;">
+                <div style="width: 100%">
+                  <form class=" p-4 rounded" action="indexdb.html" method="GET">
+                    <div class="mb-3">
+                      <label for="name" class="form-label text-light">Nombre</label>
+                      <input type="text" class="form-control bg-dark text-light" id="name" placeholder="Ingrese su nombre" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label text-light">Contraseña</label>
+                      <input type="password" class="form-control bg-dark text-light" id="password" placeholder="Ingrese su contraseña"
+                        required>
+                    </div>
+                    <button type="submit" class="btn btn-danger" style="margin-top: 10px;">Acceder</button>
+                    <a class="Registro text-light" style="float: right; margin-top: 20px;" href="regdb.html">Registrarse</a>
+                  </form>
+                </div>
+              </ul>
             </div>
-        </div>
-    </nav>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!--carrousel-->
-    <div id="carouselExample" class="carousel slide" style="margin-top: 20px; margin-bottom: 20px; height: 300px;">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://www.musisol.com/blog/wp-content/uploads/2021/04/A5-Classic-lifestyle-5-scaled.jpg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
-          </div>
-          <div class="carousel-item">
-            <img src="https://magroove-files.s3.amazonaws.com/magroove-blog/wp-content/uploads/2019/07/rsz_1karsten-schneidermann-prvy1j4aine-unsplash.jpg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
-          </div>
-          <div class="carousel-item">
-            <img src="https://soundsmarket.com/blog/wp-content/uploads/2023/03/Techivation.jpeg" class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Página Principal</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Productos</a>
+            <ul class="dropdown-menu bg-dark">
+              <li><a class="dropdown-item text-light" href="#">Altavoces</a></li>
+              <li><a class="dropdown-item text-light" href="#">Amplificadores</a></li>
+              <li><a class="dropdown-item text-light" href="#">Interfaces de Audio</a></li>
+              <li><a class="dropdown-item text-light" href="#">DACs</a></li>
+              <li><a class="dropdown-item text-light" href="#">Micrófonos</a></li>
+              <li><a class="dropdown-item text-light" href="#">Accesorios</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-3 bg-dark text-light" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark" type="submit">Search</button>
+        </form>
       </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-      <!-- CARDS -->
-    <div style="text-align: center;">
+  <!--carrousel-->
+  <div id="carouselExample" class="carousel slide" style="margin-top: 20px; margin-bottom: 20px; height: 300px; width: 100%;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.musisol.com/blog/wp-content/uploads/2021/04/A5-Classic-lifestyle-5-scaled.jpg"
+          class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://magroove-files.s3.amazonaws.com/magroove-blog/wp-content/uploads/2019/07/rsz_1karsten-schneidermann-prvy1j4aine-unsplash.jpg"
+          class="d-block w-100" alt="..." style="height: 300px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="https://soundsmarket.com/blog/wp-content/uploads/2023/03/Techivation.jpeg" class="d-block w-100"
+          alt="..." style="height: 300px; object-fit: cover;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-        <div class="card" style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
-            <img src="https://i0.wp.com/blog.madridhifi.com/wp-content/uploads/2021/02/Monitor-Mackie-CR4.png?ssl=1" class="card-img-top" alt="Altavoces" style="height: 150px; object-fit: cover; margin-top: 10px;">
-            <div class="card-body">
-              <h5 class="card-title">Altavoces</h5>
-              <p class="card-text">Explora nuestra selección de altavoces para sistemas de audio de alta calidad.</p>
-              <a href="#" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-          
-          <div class="card" style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
-            <img src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/5420047137180_1.jpg" class="card-img-top " alt="Amplificadores" style="height: 150px; object-fit: cover; margin-top: 10px;">
-            <div class="card-body">
-              <h5 class="card-title">Amplificadores</h5>
-              <p class="card-text">Amplificadores ideales para mejorar la potencia y calidad de tu sonido.</p>
-              <a href="#" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-          
-          <div class="card" style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
-            <img src="https://www.yamaki.com.co/musica-audio-consumo/wp-content/uploads/sites/2/2021/03/studio24c.png" class="card-img-top" alt="Interfaces de Audio" style="height: 150px; object-fit: cover; margin-top: 10px;">
-            <div class="card-body">
-              <h5 class="card-title">Interfaces de Audio</h5>
-              <p class="card-text">Interfaces de audio profesionales para grabación y producción musical.</p>
-              <a href="#" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-          
-          <div class="card" style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
-            <img src="https://cdn.oehlbach.com/media/7e/4f/17/1695205118/8a059a1e181d46c149fd75910175c39c.png" class="card-img-top" alt="DACs" style="height: 150px; object-fit: cover; margin-top: 10px;">
-            <div class="card-body">
-              <h5 class="card-title">DACs</h5>
-              <p class="card-text">Convierte audio digital a analógico con DACs de alta fidelidad.</p>
-              <a href="#" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-          
-          <div class="card" style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/041/450/744/small_2x/ai-generated-black-studio-broadcast-microphone-png.png" class="card-img-top" alt="Micrófonos" style="height: 150px; object-fit: cover; margin-top: 10px;">
-            <div class="card-body">
-              <h5 class="card-title">Micrófonos</h5>
-              <p class="card-text">Encuentra micrófonos para grabación, streaming o presentaciones en vivo.</p>
-              <a href="#" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
-          
-          <div class="card" style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
-            <img src="https://media2.gsm55.com/media/catalog/category/connectique-audio.png" class="card-img-top" alt="Accesorios" style="height: 150px; object-fit: cover; margin-top: 10px;">
-            <div class="card-body">
-              <h5 class="card-title">Accesorios</h5>
-              <p class="card-text">Accesorios como cables, soportes y paneles acústicos para tu equipo.</p>
-              <a href="#" class="btn btn-dark">Ver más</a>
-            </div>
-          </div>
+  <!-- CARDS -->
+  <div style="text-align: center;">
 
+    <div class="card"
+      style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
+      <img src="https://i0.wp.com/blog.madridhifi.com/wp-content/uploads/2021/02/Monitor-Mackie-CR4.png?ssl=1"
+        class="card-img-top" alt="Altavoces" style="height: 150px; object-fit: cover; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Altavoces</h5>
+        <p class="card-text">Explora nuestra selección de altavoces para sistemas de audio de alta calidad.</p>
+        <a href="#" class="btn btn-dark">Ver más</a>
+      </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3" style="margin-top: 30px;">
-      <div class="container">
-        <p class="mb-0">© 2024 Cov-Fi. Todos los derechos reservados.</p>
-        <a href="#" class="text-white">Política de privacidad</a> | 
-        <a href="#" class="text-white">Términos de servicio</a>
+    <div class="card"
+      style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
+      <img
+        src="https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/5420047137180_1.jpg"
+        class="card-img-top " alt="Amplificadores" style="height: 150px; object-fit: cover; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Amplificadores</h5>
+        <p class="card-text">Amplificadores ideales para mejorar la potencia y calidad de tu sonido.</p>
+        <a href="#" class="btn btn-dark">Ver más</a>
       </div>
-    </footer>
-    
+    </div>
+
+    <div class="card"
+      style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
+      <img src="https://www.yamaki.com.co/musica-audio-consumo/wp-content/uploads/sites/2/2021/03/studio24c.png"
+        class="card-img-top" alt="Interfaces de Audio" style="height: 150px; object-fit: cover; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Interfaces de Audio</h5>
+        <p class="card-text">Interfaces de audio profesionales para grabación y producción musical.</p>
+        <a href="#" class="btn btn-dark">Ver más</a>
+      </div>
+    </div>
+
+    <div class="card"
+      style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
+      <img src="https://cdn.oehlbach.com/media/7e/4f/17/1695205118/8a059a1e181d46c149fd75910175c39c.png"
+        class="card-img-top" alt="DACs" style="height: 150px; object-fit: cover; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">DACs</h5>
+        <p class="card-text">Convierte audio digital a analógico con DACs de alta fidelidad.</p>
+        <a href="#" class="btn btn-dark">Ver más</a>
+      </div>
+    </div>
+
+    <div class="card"
+      style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
+      <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/041/450/744/small_2x/ai-generated-black-studio-broadcast-microphone-png.png"
+        class="card-img-top" alt="Micrófonos" style="height: 150px; object-fit: cover; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Micrófonos</h5>
+        <p class="card-text">Encuentra micrófonos para grabación, streaming o presentaciones en vivo.</p>
+        <a href="#" class="btn btn-dark">Ver más</a>
+      </div>
+    </div>
+
+    <div class="card"
+      style="width: 270px; height: 350px; margin: 10px; display: inline-block; vertical-align: top; background-color: rgb(41, 41, 41); color: white;">
+      <img src="https://media2.gsm55.com/media/catalog/category/connectique-audio.png" class="card-img-top"
+        alt="Accesorios" style="height: 150px; object-fit: cover; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Accesorios</h5>
+        <p class="card-text">Accesorios como cables, soportes y paneles acústicos para tu equipo.</p>
+        <a href="#" class="btn btn-dark">Ver más</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3" style="margin-top: 30px;">
+    <div class="container">
+      <p class="mb-0">© 2024 Cov-Fi. Todos los derechos reservados.</p>
+      <a href="#" class="text-white">Política de privacidad</a> |
+      <a href="#" class="text-white">Términos de servicio</a>
+    </div>
+  </footer>
+
 
 
 </body>
+
 </html>
